@@ -7,12 +7,12 @@
 ---
 
 ## 🌎 Language / Idioma
-- [English](#english-version)
-- [Español](#versión-en-español)
+- [English](#english-explanation)
+- [Español](#explicacion-en-español)
 
 ---
 
-## English Version
+## English Explanation
 
 A comprehensive banking management system built with **Java (JSP/Servlets)**, utilizing a **Model-View-Controller (MVC)** architecture. This project manages users, bank accounts, and transactions with a persistent MySQL backend.
 
@@ -33,7 +33,7 @@ A comprehensive banking management system built with **Java (JSP/Servlets)**, ut
 
 ---
 
-## Versión en Español
+## Explicación en Español
 
 Sistema integral de gestión bancaria desarrollado con **Java (JSP/Servlets)**, utilizando una arquitectura **Modelo-Vista-Controlador (MVC)**. Este proyecto permite administrar usuarios, cuentas bancarias y transacciones con un backend persistente en MySQL.
 
