@@ -1,0 +1,673 @@
+/********************----- Base -----********************/
+@charset "UTF-8";
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto-Black', Arial, sans-serif;
+}
+
+/******************** Reusables ********************/
+/* ----------------------------- */
+/*          ACOMODAR             */
+/* ----------------------------- */
+
+.contenedor-centro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contenedor-centro2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contenedor-centro3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  height: 100vh;          
+  background-color: #f8f9fa;
+}
+
+.contenedor-centro4 {
+  display: flex;
+  background-color: #d6eaff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* TODO LO DE ACA TIENE QUE SER CENTRADO APARTE */
+.info-izquierda {
+  text-align: left;
+}
+
+.info-centro {
+  text-align: center;
+}
+
+.info-derecha {
+  text-align: right;
+}
+
+.separar{
+  margin-bottom: 40px;
+}
+
+.flex-space{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-space select{
+  width: 50%;
+  height: 40px;
+  margin: auto;
+  margin-right: 0px;
+}
+
+/* ----------------------------- */
+/*          bloques              */
+/* ----------------------------- */
+/* Caja reutilizable para formularios, alertas, etc */
+.caja {
+  background-color: #d8e9fc;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 95%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.bloque-Tit-Sub {
+  background-color: #d6eaff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin: 10px 0;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.banner-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6eaff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+  margin: 20px;
+}
+
+.banner-titulo2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6eaff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  max-width: 700px;
+  margin: 20px;
+}
+
+.banner-titulo-numero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d6eaff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+  margin: 20px;
+}
+
+.banner-mediano {
+  background-color: #d6eaff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+}
+
+.banner-mediano2 {
+  background-color: #e4f1ff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+} 
+
+.banner-mediano3 {
+  background-color: #e4f1ff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+} 
+
+.expandible {
+  max-height: none; /* Elimina límite de alto */
+  height: auto;     /* Se adapta al contenido */
+  overflow: visible; /* Evita recortes o scrolls innecesarios */
+}
+
+.banner-chico {
+  box-sizing: border-box;
+  width: 40%;
+  max-width: 600px;
+  border-radius: 12px;
+  background-color: #d6eaff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cuadrados {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.banner-items{
+  display: flex;
+  justify-content: space-between;
+  background-color: #dfeaf7;
+  width: 100%;
+  margin-bottom: 10px;
+  align-items: center; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.recibido {
+  color: #00cc66; /* verde */
+}
+
+.enviado {
+  color: #ff4d4d; /* rojo */
+}
+
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* TEXTO                        */
+/* ----------------------------- */
+
+.titulo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.nombre { /* es acompañado por descripcion */
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+.nombre2 { /* es acompañado por descripcion */
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.descripcion {
+  margin-top: 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  opacity: 80%;
+  display: block;
+}
+
+.descripcion-fecha{
+  margin-top: 20px;
+  margin-bottom: 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  opacity: 80%;
+  display: block;
+}
+
+
+.monto {/* DINERO */
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 25px;
+}
+
+.texto-mini-informativo {
+  margin-top: 15px;
+  margin-bottom: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  opacity: 80%;
+  display: block;
+}
+
+.ajustar-inline{
+  display: inline;
+  
+}
+
+/* ----------------------------- */
+/* FORMULARIOS                  */
+/* ----------------------------- */
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-texto {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 90%;
+}
+
+.campo-password {
+  position: relative;
+}
+
+.campo-password input {
+  width: 90%;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* ----------------------------- */
+/*        INPUTS                 */
+/* ----------------------------- */
+
+.input-ingresar-plata{
+  text-align: center;         /* Centra el texto horizontalmente */
+  vertical-align: middle;     /* Asegura la altura vertical */
+  height: 60px;               /* Aumenta si lo ves chico */
+  font-size: 30px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f3f9ff;
+  padding: 0;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f8ff; /* celeste claro */
+  border-radius: 6px;
+  height: 45px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.input-wrapper .prefix {
+  position: absolute;
+  left: 15px;
+  font-size: 20px;
+  color: #000000; /* un azul oscuro de contraste */
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: center;
+  font-size: 22px;
+  color: #000000;
+}
+
+.input-ddl{
+  display: flex;
+  font-size: 15px;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  outline:none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.flex-space input:read-only{
+  border: none;
+  outline:none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 50%;
+  height: 40px;
+  margin: auto;
+  margin-right: 0px;
+}
+
+/* ----------------------------- */
+/* BOTONES                      */
+/* ----------------------------- */
+
+.boton {
+  padding: 10px 15px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+  align-self: center;
+  font-weight: bold;
+}
+
+.boton2 {
+  padding: 15px 10px;
+  background-color: #2e86de;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botonTabla {
+  padding: 5px 5px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+  align-self: center;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background-color: #1565c0;
+}
+
+.boton2:hover {
+  background-color: #1565c0;
+}
+
+.botonTabla:hover {
+  background-color: #1565c0;
+}
+
+.botonera {
+  list-style: none;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  max-width: 700px;
+}
+
+.botonera li a {
+  padding: 12px 14px;
+  background-color: #1e88e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: 'MiFuente', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.botonera li a:hover {
+  background-color: #004d99;
+}
+
+.botonera li a i {
+  margin-right: 6px;
+  font-size: 18px;
+}
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* COSAS ESPECIFICAS             */
+/* ----------------------------- */
+
+  .flecha {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+/* ----------------------------- */
+/********************----- 1.Inicio Sesion -----********************/
+/********************----- 2.Tarjetas -----********************/
+.grupo-cuenta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta {
+  background-color: #ddebfc;
+  border-radius: 10px;
+  padding: 25px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 180px;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+#btnCerrarSesion {
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnCerrarSesion:hover {
+  background-color: #1976d2;
+}
+
+/********************----- 3.Inicio Cliente -----********************/
+a.sin-estilo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    }
+
+/********************----- 4.Ingresar Dinero -----********************/
+
+/********************----- 5.Transferir Pesos -----********************/
+
+/********************----- 6.Tus Cuentas-----********************/
+
+/********************----- 7.AQuienVasATransferir -----********************/
+
+/********************----- 17.AltaCliente -----********************/
+
+.banner-mediano-ingresar {
+  display: flex;
+  background-color: #e4f1ff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+} 
+
+.formulario-ingresar{
+  width: 100%;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.fila h2 {
+  margin: 0;
+  width: 40%;               /* Ancho fijo para etiqueta */
+  text-align: right;
+  padding-right: 10px;
+}
+
+.fila h3 {
+  white-space: nowrap; /* Evita que se corte */
+  margin-right: 10px;
+}
+
+.fila input {
+  width: 55%;
+  min-width: 200px; /* Asegura espacio visible */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fila select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 59%;
+}
+
+/********************----- 19.ModificarDatos -----********************/
+
+.tabla-clientes {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tabla-clientes th, .tabla-clientes td {
+  padding: 1px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 13px;
+}
+
+.tabla-clientes th {
+  background-color: #dceeff;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #2e86de;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+canvas {
+    background-color: #e4f1ff;
+    width: 50px;
+    height: 50px;
+    display:column;
+}
+
+.graficoBalance {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  align-self: center;
+  display: block;
+  margin: 0 auto;
+}
+

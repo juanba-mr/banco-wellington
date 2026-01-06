@@ -1,0 +1,28 @@
+# Compiled class files
+*.class
+
+# Package files
+*.war
+*.ear
+
+# Build directories 
+target/
+build/
+dist/
+
+# Eclipse / IDE specific settings 
+# .classpath
+# .project
+# .settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
